@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-metropolis text-white;
+  }
+}
+
+@layer utilities {
+  .grid-align-items-center {
+    align-items: center;
+  }
+}
