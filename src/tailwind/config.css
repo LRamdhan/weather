@@ -12,4 +12,8 @@
   .grid-align-items-center {
     align-items: center;
   }
+
+  .no-scrollbar::-webkit-scrollbar {
+     width: 0
+  }
 }

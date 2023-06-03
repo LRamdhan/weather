@@ -6,7 +6,8 @@ export default {
       colors: {
         background: "#4EACFA",
         gr1: "#1260ae",
-        gr2: "#71b3f0"
+        gr2: "#71b3f0",
+        paper: "#6CB7FF"
       },
       fontFamily: {
         metropolis: "metropolis"
