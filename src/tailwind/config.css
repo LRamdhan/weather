@@ -4,7 +4,13 @@
 
 @layer base {
   body {
-    @apply font-metropolis text-white;
+    @apply font-mpolis text-white;
+  }
+}
+
+@layer components {
+  .title-info {
+    @apply font-bold text-xl sm:text-3xl sm:text-center capitalize;
   }
 }
 

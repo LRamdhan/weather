@@ -7,10 +7,13 @@ export default {
         background: "#4EACFA",
         gr1: "#1260ae",
         gr2: "#71b3f0",
-        paper: "#6CB7FF"
+        paper: "#6CB7FF",
+        good: "#52FF27",
+        enough: "#FFB800",
+        bad: "#FF4949"
       },
       fontFamily: {
-        metropolis: "metropolis"
+        mpolis: "mpolis"
       },
       gridTemplateRows: {
         currentRow: "repeat(4, max-content)",
