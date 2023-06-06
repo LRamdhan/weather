@@ -10,7 +10,8 @@ export default {
         paper: "#6CB7FF",
         good: "#52FF27",
         enough: "#FFB800",
-        bad: "#FF4949"
+        bad: "#FF4949",
+        second: "#AED6FB"
       },
       fontFamily: {
         mpolis: "mpolis"

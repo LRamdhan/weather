@@ -22,4 +22,14 @@
   .no-scrollbar::-webkit-scrollbar {
      width: 0
   }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 10px;
+    height: 30px;
+    @apply bg-second;
+  }
+  
+  .custom-scrollbar-thumb::-webkit-scrollbar-thumb {
+    @apply bg-[#799FC1];
+  }
 }
