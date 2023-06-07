@@ -26,7 +26,7 @@ const Aktivity = () => {
         <HikingIcon sx={iconStyle}/>
         <h3 className="text-base capitalize grow pt-[14px]">Mendaki</h3>
         <div className="h-1 w-9 bg-enough sm:w-10"></div>
-        <h3 className="text-base capitalize font-semibold pt-[10px]">bagus</h3>
+        <h3 className="text-base capitalize font-semibold pt-[10px]">cukup</h3>
       </div>
       <div className="bg-paper aspect-square rounded-xl p-4 flex flex-col sm:px-6">
         <DirectionsBikeIcon sx={iconStyle}/>
@@ -38,13 +38,13 @@ const Aktivity = () => {
         <DirectionsBusIcon sx={iconStyle}/>
         <h3 className="text-base capitalize grow pt-[14px]">berpergian</h3>
         <div className="h-1 w-9 bg-bad sm:w-10"></div>
-        <h3 className="text-base capitalize font-semibold pt-[10px]">bagus</h3>
+        <h3 className="text-base capitalize font-semibold pt-[10px]">buruk</h3>
       </div>
       <div className="bg-paper aspect-square rounded-xl p-4 flex flex-col sm:px-6">
         <DirectionsRunIcon sx={iconStyle}/>
         <h3 className="text-base capitalize grow pt-[14px]">olahraga</h3>
         <div className="h-1 w-9 bg-enough sm:w-10"></div>
-        <h3 className="text-base capitalize font-semibold pt-[10px]">bagus</h3>
+        <h3 className="text-base capitalize font-semibold pt-[10px]">cukup</h3>
       </div>
     </div>
   </div>);
