@@ -1,0 +1,46 @@
+{
+  "coord": {
+      "lon": 107.9167,
+      "lat": -6.85
+  },
+  "weather": [
+      {
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02d"
+      }
+  ],
+  "base": "stations",
+  "main": {
+      "temp": 31.21,
+      "feels_like": 33.39,
+      "temp_min": 31.21,
+      "temp_max": 31.21,
+      "pressure": 1012,
+      "humidity": 52,
+      "sea_level": 1012,
+      "grnd_level": 960
+  },
+  "visibility": 10000,
+  "wind": {
+      "speed": 1.49,
+      "deg": 127,
+      "gust": 2.39
+  },
+  "clouds": {
+      "all": 20
+  },
+  "dt": 1686365195,
+  "sys": {
+      "type": 2,
+      "id": 2040444,
+      "country": "ID",
+      "sunrise": 1686351347,
+      "sunset": 1686393583
+  },
+  "timezone": 25200,
+  "id": 1626100,
+  "name": "Sumedang Utara",
+  "cod": 200
+}

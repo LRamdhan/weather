@@ -1,4 +1,4 @@
-import { memo } from "react";
+import { memo, useMemo } from "react";
 import PhishingIcon from '@mui/icons-material/Phishing';
 import HikingIcon from '@mui/icons-material/Hiking';
 import DirectionsBikeIcon from '@mui/icons-material/DirectionsBike';
@@ -6,12 +6,14 @@ import DirectionsBusIcon from '@mui/icons-material/DirectionsBus';
 import DirectionsRunIcon from '@mui/icons-material/DirectionsRun';
 
 const Aktivity = () => {
-  const iconStyle = {
-    fontSize: {
-      xs: "33px",
-      sm: "35px"
-    }
-  };
+  const iconStyle = useMemo(() => {
+    return {
+      fontSize: {
+        xs: "33px",
+        sm: "35px"
+      }
+    };
+  }, []);
 
   return (<div className="mt-14 px-4 sm:mt-[104px] sm:px-[92px]">
     <h3 className="title-info">aktivitas</h3>

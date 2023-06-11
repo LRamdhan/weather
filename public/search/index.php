@@ -28,7 +28,7 @@ if($_SERVER["REQUEST_METHOD"] !== "GET") {
 
 $connect = mysqli_connect($_ENV["url"], "root", "", "weather");
 $q = isset($_GET["q"]) ? $_GET["q"] : "";
-$query = mysqli_query($connect, "SELECT * FROM city WHERE name LIKE '%$q%' LIMIT 10");
+$query = mysqli_query($connect, "SELECT * FROM city WHERE name LIKE '%$q%' LIMIT 20");
 $data = [];
 while($row = mysqli_fetch_assoc($query)) { $data[] = $row; }
 
