@@ -1597,6 +1597,10 @@ body {
     padding-left: 0px;
   }
 
+  .md\:pl-10 {
+    padding-left: 2.5rem;
+  }
+
   .md\:pt-0 {
     padding-top: 0px;
   }

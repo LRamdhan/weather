@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 43 42.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#New_Gradient_Swatch_copy_2-4);
+      }
+
+      .cls-2 {
+        fill: url(#New_Gradient_Swatch_copy_2);
+      }
+
+      .cls-3 {
+        fill: url(#New_Gradient_Swatch_copy_2-2);
+      }
+
+      .cls-4 {
+        fill: url(#New_Gradient_Swatch_copy_2-5);
+      }
+
+      .cls-5 {
+        fill: url(#New_Gradient_Swatch_copy_2-3);
+      }
+    </style>
+    <linearGradient id="New_Gradient_Swatch_copy_2" data-name="New Gradient Swatch copy 2" x1="0" y1="2" x2="43" y2="2" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d0e8f8"/>
+      <stop offset="1" stop-color="#e1eef9"/>
+    </linearGradient>
+    <linearGradient id="New_Gradient_Swatch_copy_2-2" data-name="New Gradient Swatch copy 2" x1="8" y1="11.62" x2="33" y2="11.62" xlink:href="#New_Gradient_Swatch_copy_2"/>
+    <linearGradient id="New_Gradient_Swatch_copy_2-3" data-name="New Gradient Swatch copy 2" x1="14" y1="21.25" x2="36" y2="21.25" xlink:href="#New_Gradient_Swatch_copy_2"/>
+    <linearGradient id="New_Gradient_Swatch_copy_2-4" data-name="New Gradient Swatch copy 2" x1="14" y1="30.88" x2="30" y2="30.88" xlink:href="#New_Gradient_Swatch_copy_2"/>
+    <linearGradient id="New_Gradient_Swatch_copy_2-5" data-name="New Gradient Swatch copy 2" x1="15.5" y1="40.5" x2="20.5" y2="40.5" xlink:href="#New_Gradient_Swatch_copy_2"/>
+  </defs>
+  <g id="Icons">
+    <g id="Tronado">
+      <path class="cls-2" d="M41,4H2C.9,4,0,3.1,0,2S.9,0,2,0H41c1.1,0,2,.9,2,2s-.9,2-2,2Z"/>
+      <path class="cls-3" d="M31,13.62H10c-1.1,0-2-.9-2-2s.9-2,2-2H31c1.1,0,2,.9,2,2s-.9,2-2,2Z"/>
+      <path class="cls-5" d="M34,23.25H16c-1.1,0-2-.9-2-2s.9-2,2-2h18c1.1,0,2,.9,2,2s-.9,2-2,2Z"/>
+      <path class="cls-1" d="M28,32.88h-12c-1.1,0-2-.9-2-2s.9-2,2-2h12c1.1,0,2,.9,2,2s-.9,2-2,2Z"/>
+      <path class="cls-4" d="M18.5,42.5h-1c-1.1,0-2-.9-2-2s.9-2,2-2h1c1.1,0,2,.9,2,2s-.9,2-2,2Z"/>
+    </g>
+  </g>
+</svg>
