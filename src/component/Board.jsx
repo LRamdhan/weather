@@ -4,7 +4,7 @@ import waveMd from "./../img/wave-md.svg";
 import CurrentWeather from "./CurrentWeather";
 import HourForecast from "./HourForecast";
 import DayForecast from "./DayForecast";
-import Aktivity from "./Aktivity";
+import Activity from "./Activity";
 import Copyright from "./Copyright";
 
 const Board = () => {
@@ -15,7 +15,7 @@ const Board = () => {
       <CurrentWeather/>
       <HourForecast/>
       <DayForecast/>
-      <Aktivity/>
+      <Activity/>
       <Copyright/>
     </section>
   </main>);

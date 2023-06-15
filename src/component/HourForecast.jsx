@@ -8,8 +8,8 @@ const HourForecast = () => {
     <h2 className="title-info text-start md:hidden">today</h2>
     <div className="overflow-x-scroll no-scrollbar mt-5 sm:mt-12 md:mt-0 md:flex md:justify-center">
       <div className="space-x-4 w-[900px] md:w-max">
-        {mainReducer.hourForecast.map(el => {
-          return (<div className="w-[105px] h-36 bg-paper rounded-xl inline-flex flex-col items-center justify-between py-3">
+        {mainReducer.hourForecast.map((el, ind) => {
+          return (<div key={ind} className="w-[105px] h-36 bg-paper rounded-xl inline-flex flex-col items-center justify-between py-3">
             <h4 className="text-sm">{el.hour}</h4>
             <img src={`/img/condition/${el.icon}.svg`} alt="something went wrong" className="drop-shadow-lg w-[50px] sm:w-[55px]"/>
             <h4 className="flex items-start">
