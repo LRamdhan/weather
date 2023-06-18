@@ -5,18 +5,13 @@ import { useSearch } from "./../context/searchContext.jsx";
 import { useWeather, useHistory } from "../hook/search.js";
 import { useDispatch } from "react-redux";
 import { updateWeather } from "../toolkit/mainSlice.js";
+import { useNavigation } from "../context/navigationContext.jsx";
+import { useSaveNavigation } from "../hook/info.js";
 
 const SearchList = () => {
   const { result, setResult, setDisplay, setSearchInput } = useSearch();
   const dispatch = useDispatch();
-  const iconStyle = useMemo(() => {
-    return {
-      fontSize: {
-        xs: "31px"
-      },
-      color: "#AED6FB"
-    };
-  }, []);
+  const {setNavWeather} = useNavigation();
 
   useEffect(useCallback(() => {
     if(!localStorage.getItem("history"))
@@ -41,16 +36,18 @@ const SearchList = () => {
     setDisplay("none");
     useHistory(setResult);
     useWeather(id, response => dispatch(updateWeather(response)), error => console.log(error));
+    useSaveNavigation({ id, name, country });
+    setNavWeather();
   }, []);
 
   return (
-    <ul className="px-[14px] mt-1 divide-y-[1.5px] divide-second divide-solid flex-1 overflow-y-scroll no-scrollbar md:custom-scrollbar md:custom-scrollbar-thumb md:px-8 md:text-lg">
+    <ul className="px-[14px] mt-1 divide-y-[1.5px] divide-second dark:divide-darkOuter divide-solid flex-1 overflow-y-scroll no-scrollbar md:custom-scrollbar md:custom-scrollbar-thumb md:px-8 md:text-lg">
       {result.map((el, ind) => {
         return (<li key={ind} onClick={() => pick(el.id, el.name, el.country)} className="flex justify-between items-center text-lg py-4 px-1 md:px-4">
-          {el.history ? <HistoryIcon sx={iconStyle}/> : <PlaceOutlinedIcon sx={iconStyle} />}
+          {el.history ? <HistoryIcon sx={{fontSize: "31px"}} color="icon"/> : <PlaceOutlinedIcon sx={{fontSize: "31px"}} color="icon"/>}
           <span className="font-medium capitalize flex-1 pl-6 md:order-2">{el.name}</span>
           <img src={`https://www.countryflagicons.com/FLAT/64/${el.country}.png`} alt="something's wrong" className="w-10 md:order-1 md:ml-8"/>
-          <div className="aspect-square w-3 border-t-2 border-r-2 border-second rotate-45 hidden md:block md:order-3"></div>
+          <div className="aspect-square w-3 border-t-2 border-r-2 border-second dark:border-darkOuter rotate-45 hidden md:block md:order-3"></div>
         </li>);
       })}
     </ul>

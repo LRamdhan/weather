@@ -1,4 +1,4 @@
-import { createContext, memo, useContext, useState } from "react";
+import { createContext, memo, useContext, useReducer, useState } from "react";
 
 const navigation = createContext({
   empty: true,
@@ -7,7 +7,9 @@ const navigation = createContext({
 
 const NavigationProvider = props => {
   const [sideAppear, setSideAppear] = useState(false);
-  const data = {sideAppear, setSideAppear};
+  const reducer = () => JSON.parse(localStorage.getItem('navigation'));
+  const [navWeather, setNavWeather] = useReducer(reducer, []);
+  const data = {sideAppear, setSideAppear, navWeather, setNavWeather};
 
   return (<navigation.Provider value={data}>{props.children}</navigation.Provider>);
 };

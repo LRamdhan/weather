@@ -228,4 +228,31 @@ const useActivity = (temp, cdt, wind, hmd, cloud) => {
   return sugesstions;
 };
 
-export {useActivity};
+const useSaveNavigation = data => {
+  const ngt = JSON.parse(localStorage.getItem('navigation'));
+  let i = 0;
+  for(let child of ngt) {
+    if(child.id === data.id) {
+      ngt.splice(i, 1);
+      break;
+    }
+    i++;
+  }
+  ngt.unshift(data);
+  localStorage.setItem('navigation', JSON.stringify(ngt));
+};
+
+const useRemoveNavigation = id => {
+  const ngt = JSON.parse(localStorage.getItem('navigation'));
+  let i = 0;
+  for(let child of ngt) {
+    if(child.id === id) {
+      ngt.splice(i, 1);
+      break;
+    }
+    i++;
+  }
+  localStorage.setItem('navigation', JSON.stringify(ngt));
+}
+
+export {useActivity, useSaveNavigation, useRemoveNavigation};

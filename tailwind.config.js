@@ -11,7 +11,9 @@ export default {
         good: "#52FF27",
         enough: "#FFB800",
         bad: "#FF4949",
-        second: "#AED6FB"
+        second: "#AED6FB",
+        darkPaper: "#2C87C5",
+        darkOuter: "#6590AC"
       },
       fontFamily: {
         mpolis: "mpolis"
@@ -28,5 +30,6 @@ export default {
       }
     },
   },
-  plugins: []
+  plugins: [],
+  darkMode: 'class'
 }

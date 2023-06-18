@@ -8,7 +8,7 @@ const DayForecast = () => {
     <h3 className="title-info">5 days forecast</h3>
     <div className="mt-6 space-y-5 sm:mt-12 sm:space-y-6 md:w-[587px] md:mx-auto">
       {mainReducer.dayForecast.map((el, ind) => {
-        return (<div key={ind} className="flex items-center h-14 bg-paper rounded-xl px-6 sm:h-[72px]">
+        return (<div key={ind} className="flex items-center h-14 bg-paper dark:bg-darkPaper rounded-xl px-6 sm:h-[72px]">
           <img src={`/img/condition/${el.icon}.svg`} alt="something went wrong" className="drop-shadow-md w-9 sm:w-12"/>
           <h4 className="font-semibold text-base grow pl-9 capitalize sm:text-xl sm:pl-14">{el.day}</h4>
           <h4 className="flex items-start">

@@ -31,33 +31,33 @@ const Activity = () => {
   }, []);
 
   return (<div className="mt-14 px-4 sm:mt-[104px] sm:px-[92px]">
-    <h3 className="title-info">aktivity</h3>
+    <h3 className="title-info">activity</h3>
     <div className="mt-6 grid grid-cols-2 auto-rows-max gap-4 sm:mt-12 sm:grid-cols-3 sm:gap-x-9 sm:gap-y-12 md:mx-auto md:w-[587px]">
-      <div className="bg-paper aspect-square rounded-xl p-4 flex flex-col sm:px-6">
+      <div className="bg-paper dark:bg-darkPaper aspect-square rounded-xl p-4 flex flex-col sm:px-6">
         <PhishingIcon sx={iconStyle}/>
         <h3 className="text-base capitalize grow pt-[14px]">fishing</h3>
         <div className={`h-1 w-9 ${setColor(sugesstions.fishing)} sm:w-10`}></div>
         <h3 className="text-base capitalize font-semibold pt-[10px]">{sugesstions.fishing}</h3>
       </div>
-      <div className="bg-paper aspect-square rounded-xl p-4 flex flex-col sm:px-6">
+      <div className="bg-paper dark:bg-darkPaper aspect-square rounded-xl p-4 flex flex-col sm:px-6">
         <HikingIcon sx={iconStyle}/>
         <h3 className="text-base capitalize grow pt-[14px]">hiking</h3>
         <div className={`h-1 w-9 ${setColor(sugesstions.hiking)} sm:w-10`}></div>
         <h3 className="text-base capitalize font-semibold pt-[10px]">{sugesstions.hiking}</h3>
       </div>
-      <div className="bg-paper aspect-square rounded-xl p-4 flex flex-col sm:px-6">
+      <div className="bg-paper dark:bg-darkPaper aspect-square rounded-xl p-4 flex flex-col sm:px-6">
         <DirectionsBikeIcon sx={iconStyle}/>
         <h3 className="text-base capitalize grow pt-[14px]">bicycle</h3>
         <div className={`h-1 w-9 ${setColor(sugesstions.bicyle)} sm:w-10`}></div>
         <h3 className="text-base capitalize font-semibold pt-[10px]">{sugesstions.bicyle}</h3>
       </div>
-      <div className="bg-paper aspect-square rounded-xl p-4 flex flex-col sm:px-6">
+      <div className="bg-paper dark:bg-darkPaper aspect-square rounded-xl p-4 flex flex-col sm:px-6">
         <DirectionsBusIcon sx={iconStyle}/>
         <h3 className="text-base capitalize grow pt-[14px]">traveling</h3>
         <div className={`h-1 w-9 ${setColor(sugesstions.traveling)} sm:w-10`}></div>
         <h3 className="text-base capitalize font-semibold pt-[10px]">{sugesstions.traveling}</h3>
       </div>
-      <div className="bg-paper aspect-square rounded-xl p-4 flex flex-col sm:px-6">
+      <div className="bg-paper dark:bg-darkPaper aspect-square rounded-xl p-4 flex flex-col sm:px-6">
         <DirectionsRunIcon sx={iconStyle}/>
         <h3 className="text-base capitalize grow pt-[14px]">sport</h3>
         <div className={`h-1 w-9 ${setColor(sugesstions.sport)} sm:w-10`}></div>

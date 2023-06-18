@@ -25,14 +25,15 @@ const useCity = (keyword, success, fail) => {
     .catch(error => fail(error.message));
 };
 
-const useWeather = async (id, success, fail) => {
+const useWeather = async (id, success, fail, params) => {
+  if(!params) params = {
+    id: id,
+    appid: import.meta.env.VITE_api_key,
+    units: "metric"
+  };
   const weatherApi = axios.create({
     baseURL: "https://api.openweathermap.org/data/2.5/",
-    params: {
-      id: id,
-      appid: import.meta.env.VITE_api_key,
-      units: "metric"
-    },
+    params,
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded'
     }
@@ -49,6 +50,7 @@ const useWeather = async (id, success, fail) => {
     return;
   }
   success({current, forecast});
+  localStorage.setItem('latest', current.id);
 };
 
 const useHistory = addHistory => {
@@ -60,4 +62,22 @@ const useHistory = addHistory => {
   addHistory(historyList)
 };
 
-export { useCity, useWeather, useHistory };
+const useDefaultWeather = success => {
+  const id = localStorage.getItem('latest');
+  if(id) {
+    useWeather(id, response => success(response), error => console.log(error));
+    return;
+  }
+  navigator.geolocation.getCurrentPosition(({coords}) => {
+    useWeather(0, response => success(response), error => console.log(error), {
+      lat: coords.latitude,
+      lon: coords.longitude,
+      id: id,
+      appid: import.meta.env.VITE_api_key,
+      units: "metric"
+    });
+  }, () => useWeather(1642911, response => success(response), error => console.log(error)),
+  {enableHighAccuracy: true});
+};
+
+export { useCity, useWeather, useHistory, useDefaultWeather };
