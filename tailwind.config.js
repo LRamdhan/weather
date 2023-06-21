@@ -20,7 +20,8 @@ export default {
       },
       gridTemplateRows: {
         currentRow: "repeat(4, max-content)",
-        currentRowLg: "repeat(2, max-content)"
+        currentRowLg: "repeat(2, max-content)",
+        currentRowLayout: "max-content auto"
       },
       gridTemplateColumns: {
         currentCol: "max-content auto max-content max-content"

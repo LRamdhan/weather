@@ -6,11 +6,12 @@ import NavigationProvider from "./../context/navigationContext.jsx";
 import SearchProvider from "./../context/searchContext.jsx";
 import { configureStore } from "@reduxjs/toolkit";
 import mainReducer from "../toolkit/mainSlice";
+import skeletonReducer from "../toolkit/skeletonSlice";
 import { Provider } from "react-redux";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useCallback, useState } from "react";
 
-const mainStore = configureStore({reducer: {mainReducer}});
+const mainStore = configureStore({reducer: {mainReducer, skeletonReducer}});
 
 const App = () => {
   const [mode, setMode] = useState("light");

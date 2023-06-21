@@ -16,7 +16,7 @@ const Activity = () => {
       }
     };
   }, []);
-  const {mainReducer} = useSelector(data => data);
+  const {mainReducer, skeletonReducer} = useSelector(data => data);
   const sugesstions = useActivity(mainReducer.current.temperature, mainReducer.current.condition, mainReducer.current.wind, mainReducer.current.humidity, mainReducer.current.cloud);
 
   const setColor = useCallback(cdt => {
@@ -30,9 +30,16 @@ const Activity = () => {
     }
   }, []);
 
+  const skeletonList = useMemo(() => {
+    const data = [];
+    for(let i = 1; i <= 5; i++) { data.push(i); }
+    return data;
+  }, []);
+
   return (<div className="mt-14 px-4 sm:mt-[104px] sm:px-[92px]">
-    <h3 className="title-info">activity</h3>
-    <div className="mt-6 grid grid-cols-2 auto-rows-max gap-4 sm:mt-12 sm:grid-cols-3 sm:gap-x-9 sm:gap-y-12 md:mx-auto md:w-[587px]">
+    <h3 className={`title-info ${skeletonReducer.contentDisplay}`}>activity</h3>
+    <div className={`w-36 h-7 text-info skeleton sm:h-9 sm:mx-auto ${skeletonReducer.skeletonDisplay}`}></div>
+    <div className={`mt-6 grid grid-cols-2 auto-rows-max gap-4 sm:mt-12 sm:grid-cols-3 sm:gap-x-9 sm:gap-y-12 md:mx-auto md:w-[587px] ${skeletonReducer.contentDisplay}`}>
       <div className="bg-paper dark:bg-darkPaper aspect-square rounded-xl p-4 flex flex-col sm:px-6">
         <PhishingIcon sx={iconStyle}/>
         <h3 className="text-base capitalize grow pt-[14px]">fishing</h3>
@@ -63,6 +70,9 @@ const Activity = () => {
         <div className={`h-1 w-9 ${setColor(sugesstions.sport)} sm:w-10`}></div>
         <h3 className="text-base capitalize font-semibold pt-[10px]">{sugesstions.sport}</h3>
       </div>
+    </div>
+    <div className={`mt-6 grid grid-cols-2 auto-rows-max gap-4 sm:mt-12 sm:grid-cols-3 sm:gap-x-9 sm:gap-y-12 md:mx-auto md:w-[587px] ${skeletonReducer.skeletonDisplay}`}>
+      {skeletonList.map(el => <div className="aspect-square skeleton p-4 flex flex-col sm:px-6"></div>)}
     </div>
   </div>);
 };

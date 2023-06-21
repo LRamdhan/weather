@@ -49,8 +49,10 @@ const useWeather = async (id, success, fail, params) => {
     fail({currentFail, forecastFail});
     return;
   }
-  success({current, forecast});
-  localStorage.setItem('latest', current.id);
+  setTimeout(() => {
+    success({current, forecast});
+    localStorage.setItem('latest', current.id);
+  }, 500);
 };
 
 const useHistory = addHistory => {
@@ -76,7 +78,7 @@ const useDefaultWeather = success => {
       appid: import.meta.env.VITE_api_key,
       units: "metric"
     });
-  }, () => useWeather(1642911, response => success(response), error => console.log(error)),
+  }, () => useWeather(1642911, response => setTimeout(() => success(response), 500), error => console.log(error)),
   {enableHighAccuracy: true});
 };
 

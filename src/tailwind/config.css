@@ -29,6 +29,10 @@
   .title-info {
     @apply font-bold text-xl sm:text-3xl sm:text-center capitalize;
   }
+
+  .skeleton {
+    @apply bg-white opacity-40 dark:opacity-30 backdrop-blur-[30px];
+  }
 }
 
 @layer utilities {
@@ -48,5 +52,9 @@
   
   .custom-scrollbar-thumb::-webkit-scrollbar-thumb {
     @apply bg-[#799FC1];
+  }
+
+  .top-space {
+    @apply top-[228px] sm:top-[315px] md:top-0;
   }
 }

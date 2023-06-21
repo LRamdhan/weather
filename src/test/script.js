@@ -19,6 +19,51 @@ const data = {
   dayForecast: []
 }
 
+const ok = {
+  "mainReducer":{
+    "current":{
+      "city":"Dubai",
+      "temperature":40,
+      "condition":"Clear",
+      "wind":7,
+      "humidity":25,
+      "cloud":0,
+      "icon":"01d"
+    },
+    "hourForecast":[
+      {"hour":"12 am","icon":"01d","temperature":40},
+      {"hour":"3 pm","icon":"02d","temperature":38},
+      {"hour":"6 pm","icon":"04n","temperature":35},
+      {"hour":"9 pm","icon":"04n","temperature":31}
+    ],
+    "dayForecast":[
+      {"icon":"04n","day":"Wednesday","temperature":31},
+      {"icon":"01n","day":"Thursday","temperature":30},
+      {"icon":"01n","day":"Friday","temperature":30},
+      {"icon":"01n","day":"Saturday","temperature":30},
+      {"icon":"01n","day":"Sunday","temperature":30}
+    ]
+  },
+  "skeletonReducer":{
+    "skeletonDisplay":"hidden",
+    "contentDisplay":""
+  }
+};
+
+const defaultWeather = {
+  current: {
+    city: "",
+    temperature: "",
+    condition: "",
+    wind: "",
+    humidity: "",
+    cloud: "",
+    icon: ""
+  },
+  hourForecast: [],
+  dayForecast: []
+}
+
 // let finalResult;
 // const good = 1, fair = 3, bad = 1; 
 

@@ -5,6 +5,7 @@ import { useRemoveNavigation } from "../hook/info";
 import { useDispatch } from "react-redux";
 import { updateWeather } from "../toolkit/mainSlice";
 import { useWeather } from "../hook/search";
+import { content, skeleton } from "../toolkit/skeletonSlice";
 
 const NavigationList = () => {
   const {navWeather, setNavWeather, setSideAppear} = useNavigation();
@@ -17,7 +18,11 @@ const NavigationList = () => {
 
   const pickNavWeather = useCallback(id => {
     setSideAppear(false);
-    useWeather(id, response => dispatch(updateWeather(response)), error => console.log(error));
+    dispatch(skeleton());
+    useWeather(id, response => {
+      dispatch(updateWeather(response));
+      dispatch(content());
+    }, error => console.log(error));
   }, []);
 
   return (<div className="flex-1 overflow-y-scroll no-scrollbar">
@@ -26,7 +31,7 @@ const NavigationList = () => {
         return (<li key={ind} onClick={event => { event.stopPropagation(); pickNavWeather(el.id); }} className="px-[10px] py-5 flex items-center sm:py-6 sm:px-4">
           <img src={`https://www.countryflagicons.com/FLAT/64/${el.country}.png`} alt="something's wrong" className="w-10 sm:w-14"/>
           <h3 className="capitalize font-medium text-lg flex-1 ml-4 sm:text-[28px] sm:ml-12">{el.name}</h3>
-          <CloseIcon sx={{fontSize: {xs: "33px", sm: "46px"}}} onClick={event => {event.stopPropagation(); removeNavWeather(el.id); }}/>
+          <CloseIcon sx={{fontSize: {xs: "33px", sm: "46px"}}} onClick={event => {event.stopPropagation (); removeNavWeather(el.id); }}/>
         </li>);
       })}  
     </ul>
