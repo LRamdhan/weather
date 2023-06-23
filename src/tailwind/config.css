@@ -33,11 +33,26 @@
   .skeleton {
     @apply bg-white opacity-40 dark:opacity-30 backdrop-blur-[30px];
   }
+
+  .spin-loading {
+    border: 4px solid white;
+    border-left-color: transparent;
+    border-radius: 50%;
+    @apply animate-spin aspect-square w-9 mx-auto mt-28 sm:w-12 md:w-9;
+  }
 }
 
 @layer utilities {
   .grid-align-items-center {
     align-items: center;
+  }
+
+  .grid-align-self-item-end {
+    align-self: end;
+  }
+ 
+  .grid-align-self-item-start {
+    align-self: start;
   }
 
   .no-scrollbar::-webkit-scrollbar {

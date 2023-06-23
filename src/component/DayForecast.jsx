@@ -16,7 +16,7 @@ const DayForecast = () => {
     <div className={`mt-6 space-y-5 sm:mt-12 sm:space-y-6 md:w-[587px] md:mx-auto ${skeletonReducer.contentDisplay}`}>
       {mainReducer.dayForecast.map((el, ind) => {
         return (<div key={ind} className="flex items-center h-14 bg-paper dark:bg-darkPaper rounded-xl px-6 sm:h-[72px]">
-          <img src={`/img/condition/${el.icon}.svg`} alt="something went wrong" className="drop-shadow-md h-5 sm:h-[26px]"/>
+          <img src={`/img/condition/${el.icon}.svg`} alt="something went wrong" className="drop-shadow-md h-12 sm:h-16"/>
           <h4 className="font-semibold text-base grow pl-9 capitalize sm:text-xl sm:pl-14">{el.day}</h4>
           <h4 className="flex items-start">
             <span className="font-semibold text-base sm:text-xl">{el.temperature}</span>

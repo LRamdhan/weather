@@ -17,7 +17,7 @@ const Activity = () => {
     };
   }, []);
   const {mainReducer, skeletonReducer} = useSelector(data => data);
-  const sugesstions = useActivity(mainReducer.current.temperature, mainReducer.current.condition, mainReducer.current.wind, mainReducer.current.humidity, mainReducer.current.cloud);
+  const sugesstions = useActivity(mainReducer.current.temperature, mainReducer.current.condition, mainReducer.current.wind, mainReducer.current.humidity, mainReducer.current.cloud, mainReducer.current.icon);
 
   const setColor = useCallback(cdt => {
     switch(cdt) {
@@ -72,7 +72,7 @@ const Activity = () => {
       </div>
     </div>
     <div className={`mt-6 grid grid-cols-2 auto-rows-max gap-4 sm:mt-12 sm:grid-cols-3 sm:gap-x-9 sm:gap-y-12 md:mx-auto md:w-[587px] ${skeletonReducer.skeletonDisplay}`}>
-      {skeletonList.map(el => <div className="aspect-square skeleton p-4 flex flex-col sm:px-6"></div>)}
+      {skeletonList.map(el => <div key={el} className="aspect-square skeleton p-4 flex flex-col sm:px-6"></div>)}
     </div>
   </div>);
 };

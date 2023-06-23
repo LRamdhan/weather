@@ -18,7 +18,7 @@ const HourForecast = () => {
         {mainReducer.hourForecast.map((el, ind) => {
           return (<div key={ind} className="w-[105px] h-36 bg-paper dark:bg-darkPaper rounded-xl inline-flex flex-col items-center justify-between py-3">
             <h4 className="text-sm">{el.hour}</h4>
-            <img src={`/img/condition/${el.icon}.svg`} alt="something went wrong" className="drop-shadow-lg h-8 sm:h-9"/>
+            <img src={`/img/condition/${el.icon}.svg`} alt="something went wrong" className="drop-shadow-lg h-14 sm:h-16"/>
             <h4 className="flex items-start">
               <span className="font-semibold text-base">{el.temperature}</span>
               <div className="aspect-square w-[6px] rounded-full m-1 border-[1.5px] border-solid border-white"></div>

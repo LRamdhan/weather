@@ -1,5 +1,6 @@
-const useActivity = (temp, cdt, wind, hmd, cloud) => {
+const useActivity = (temp, cdt, wind, hmd, cloud, icon) => {
   cdt = cdt.toLowerCase();
+  icon = icon[icon.length - 1];
   const sugesstions = {};
   const threshold = [
     {
@@ -224,7 +225,19 @@ const useActivity = (temp, cdt, wind, hmd, cloud) => {
       }
     }
   }
-
+  if(icon === "n") {
+    sugesstions.hiking = "bad";
+    if(sugesstions.bicyle === "good") {
+      sugesstions.bicyle = "fair";
+    } else if(sugesstions.bicyle === "good") {
+      sugesstions.bicyle = "bad";
+    }
+    if(sugesstions.sport === "good") {
+      sugesstions.sport = "fair";
+    } else if(sugesstions.sport === "good") {
+      sugesstions.sport = "bad";
+    }
+  }
   return sugesstions;
 };
 

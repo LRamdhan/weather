@@ -1,19 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40.91 40.91">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: url(#New_Gradient_Swatch_1);
-      }
-    </style>
-    <linearGradient id="New_Gradient_Swatch_1" data-name="New Gradient Swatch 1" x1="5.99" y1="34.92" x2="34.92" y2="5.99" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#fdb728"/>
-      <stop offset="1" stop-color="#ffcd23"/>
-    </linearGradient>
-  </defs>
-  <g id="Icons">
-    <g id="Mostly_Sunny" data-name="Mostly Sunny">
-      <circle class="cls-1" cx="20.46" cy="20.46" r="20.46"/>
-    </g>
-  </g>
+<svg width="77" height="77" viewBox="0 0 77 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_410_222)">
+<path d="M38.46 58.92C49.7597 58.92 58.92 49.7597 58.92 38.46C58.92 27.1603 49.7597 18 38.46 18C27.1603 18 18 27.1603 18 38.46C18 49.7597 27.1603 58.92 38.46 58.92Z" fill="url(#paint0_linear_410_222)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_410_222" x1="23.99" y1="52.92" x2="52.92" y2="23.99" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FDB728"/>
+<stop offset="1" stop-color="#FFCD23"/>
+</linearGradient>
+<clipPath id="clip0_410_222">
+<rect width="40.91" height="40.91" fill="white" transform="translate(18 18)"/>
+</clipPath>
+</defs>
 </svg>

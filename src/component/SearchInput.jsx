@@ -4,15 +4,22 @@ import {useSearch} from "./../context/searchContext.jsx";
 import {useCity, useHistory} from "./../hook/search.js";
 
 const SearchInput = () => {
-  const {display, setDisplay, setResult, searchInput, setSearchInput} = useSearch();
+  const {display, setDisplay, setResult, searchInput, setSearchInput, setLoading} = useSearch();
 
   const search = useCallback(event => {
+    setLoading("list");
     const input = event.target.value.trim();
     if(input.length === 0) {
-      useHistory(setResult);
+      useHistory(data => {
+        setResult(data);
+        setLoading("loading");
+      });
       return;
     }
-    useCity(input, response => setResult(response.data), error => setResult([]));
+    useCity(input, response => {
+      setResult(response.data);
+      setLoading("loading");
+    }, error => setResult([]));
   }, []);
 
   const input = useRef();
