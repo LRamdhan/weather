@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { updateWeather } from "../toolkit/mainSlice";
 import { useWeather } from "../hook/search";
 import { content, skeleton } from "../toolkit/skeletonSlice";
+import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 const NavigationList = () => {
   const {navWeather, setNavWeather, setSideAppear} = useNavigation();
@@ -29,7 +30,9 @@ const NavigationList = () => {
     <ul className="py-[18px] px-3 divide-y-[1.5px] divide-[#848484] sm:py-7 sm:px-[14px]">
       {navWeather.map((el, ind) => {
         return (<li key={ind} onClick={event => { event.stopPropagation(); pickNavWeather(el.id); }} className="px-[10px] py-5 flex items-center sm:py-6 sm:px-4">
-          <img src={`https://www.countryflagicons.com/FLAT/64/${el.country}.png`} alt="something's wrong" className="w-10 sm:w-14"/>
+          <div className="w-max h-max">
+            <span className={`fi fi-${el.country.toLowerCase()} text-2xl sm:text-3xl`}></span>
+          </div>
           <h3 className="capitalize font-medium text-lg flex-1 ml-4 sm:text-[28px] sm:ml-12">{el.name}</h3>
           <CloseIcon sx={{fontSize: {xs: "33px", sm: "46px"}}} onClick={event => {event.stopPropagation (); removeNavWeather(el.id); }}/>
         </li>);

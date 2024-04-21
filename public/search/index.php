@@ -26,7 +26,7 @@ if($_SERVER["REQUEST_METHOD"] !== "GET") {
   exit;
 }
 
-$connect = mysqli_connect($_ENV["url"], "root", "", "weather");
+$connect = mysqli_connect($_ENV["url"], $_ENV["username"], $_ENV["password"], $_ENV["database"]);
 $q = isset($_GET["q"]) ? $_GET["q"] : "";
 $query = mysqli_query($connect, "SELECT * FROM city WHERE name LIKE '%$q%' LIMIT 20");
 $data = [];

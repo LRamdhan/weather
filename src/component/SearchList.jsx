@@ -8,6 +8,7 @@ import { updateWeather } from "../toolkit/mainSlice.js";
 import { useNavigation } from "../context/navigationContext.jsx";
 import { useSaveNavigation } from "../hook/info.js";
 import { skeleton, content } from "../toolkit/skeletonSlice.js";
+import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 const SearchList = () => {
   const { result, setResult, setDisplay, searchInput, setSearchInput, loading } = useSearch();
@@ -53,7 +54,11 @@ const SearchList = () => {
         return (<li key={ind} onClick={() => pick(el.id, el.name, el.country)} className="cursor-pointer flex justify-between items-center text-lg py-4 px-1 sm:px-[26px] sm:max-md:py-5 md:px-4">
           {el.history ? <HistoryIcon sx={{fontSize: {xs: "31px", sm: "46px", md: "31px"}}} color="icon"/> : <PlaceOutlinedIcon sx={{fontSize: {xs: "31px", sm: "46px", md: "31px"}}} color="icon"/>}
           <span className="font-medium capitalize flex-1 pl-6 sm:max-md:pl-11 sm:max-md:text-[28px] md:order-2">{el.name}</span>
-          <img src={`https://www.countryflagicons.com/FLAT/64/${el.country}.png`} alt="something's wrong" className="w-10 sm:max-md:w-14 md:order-1 md:ml-8"/>
+          <div className="md:order-1 md:ml-8">
+            <div className="w-max">
+              <span className={`fi fi-${el.country.toLowerCase()} text-2xl`}></span>
+            </div>
+          </div>
           <div className="aspect-square w-3 border-t-2 border-r-2 border-second dark:border-darkOuter rotate-45 hidden md:block md:order-3"></div>
         </li>);
       })}
