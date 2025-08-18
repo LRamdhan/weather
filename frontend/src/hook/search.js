@@ -32,7 +32,7 @@ const useWeather = async (id, success, fail, params) => {
     units: "metric"
   };
   const weatherApi = axios.create({
-    baseURL: "https://api.openweathermap.org/data/2.5/",
+    baseURL: import.meta.env.VITE_weather_api_url,
     params,
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded'
