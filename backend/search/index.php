@@ -4,6 +4,7 @@
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
 header("Access-Control-Allow-Headers: *");
+header("Content-Type: application/json");
 
 // disable cache
 header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");

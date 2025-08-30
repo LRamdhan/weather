@@ -11,6 +11,9 @@
 /frontend/dist
 /frontend/dist-ssr
 /frontend/*.local
+/frontend/.env
+
+/backend/.env
 
 # Editor directories and files
 .vscode/*
