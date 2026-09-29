@@ -3,7 +3,7 @@ import waveSm from "./../img/wave-sm.svg";
 import waveSmDark from "./../img/wave-dark-sm.svg";
 import waveMd from "./../img/wave-md.svg";
 import waveMdDark from "./../img/wave-dark-md.svg";
-import NavBar from "./NavBar";
+import Navbar from "./Navbar";
 import CurrentWeather from "./CurrentWeather";
 import HourForecast from "./HourForecast";
 import DayForecast from "./DayForecast";
@@ -18,7 +18,7 @@ const Board = () => {
     <img src={waveMdDark} alt="terjadi kesalahan" className="top-space w-full absolute top-0 hidden sm:dark:block md:dark:hidden"/>
     <section className="relative inset-x-0 top-0">
       <div className="md:h-screen md:grid md:grid-cols-1 md:grid-rows-currentRowLayout md:grid-align-items-center">
-        <NavBar/> 
+        <Navbar/> 
         <CurrentWeather/>
       </div>
       <HourForecast/>
