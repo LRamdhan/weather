@@ -1,17 +1,13 @@
 import express from "express";
-import cityModel from "../model/cityModel.js";
+import cityRoutes from "../routes/cityRoutes.js";
+import errorMiddleware from "../middleware/errorMiddleware.js";
 
 const app = express();
 
-app.post("/", async (req, res) => {
-  await cityModel.createTable()
-  return res.json({ message: "OK" });
-})
+// routes
+app.use("/api/city", cityRoutes)
 
-app.post("/users", async (req, res) => {
-  await cityModel.insertUser()
-  return res.json({ message: "OK" });
-})
-
+// error middlware
+app.use(errorMiddleware)
 
 export default app
