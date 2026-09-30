@@ -10,7 +10,7 @@ const useCity = (keyword, success, fail) => {
     if(matchedHistory.length === 3) break;
     index++;
   }
-  axios.get(`${import.meta.env.VITE_url}/search/index.php`, {
+  axios.get(`${import.meta.env.VITE_url}/city`, {
     params: {
       q: keyword
     },
