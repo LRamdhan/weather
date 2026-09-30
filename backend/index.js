@@ -1,10 +1,17 @@
-import app from "./config/expressConfig.js";
 import poolPg from "./config/postgreConfig.js";
 import express from "express";
 import cityRoutes from "./routes/cityRoutes.js";
 import errorMiddleware from "./middleware/errorMiddleware.js";
+import loggerMiddleware from "./middleware/loggerMiddleware.js";
+import corscacheMiddleware from "./middleware/corscacheMiddleware.js";
 
 const app = express();
+
+// logger middleware
+app.use(loggerMiddleware)
+
+// disable cors and cache middleware
+app.use(corscacheMiddleware)
 
 // routes
 app.use("/api/city", cityRoutes)

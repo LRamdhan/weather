@@ -32,8 +32,9 @@ const cityController = {
       // query data
       const result = await poolPg.query(
         `
-          SELECT * FROM city WHERE name LIKE '%${keyword}%' LIMIT 20
-        `
+          SELECT * FROM city WHERE name ILIKE $1 LIMIT 20
+        `,
+        [`%${keyword}%`]
       );
 
       // response

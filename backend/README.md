@@ -1,5 +1,7 @@
 # Weather - Backend
 
+Requirement : PostgreSQL, NodeJS
+
 ### Install Depedencies
 ```shell
 npm install
