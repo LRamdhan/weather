@@ -5,9 +5,14 @@
 npm install
 ```
 
+### Seed
+```shell
+npm run seed
+```
+
 ### Run App
 ```shell
-node index.js
+npm run start
 ```
 
 ### Install Vercel CLI
